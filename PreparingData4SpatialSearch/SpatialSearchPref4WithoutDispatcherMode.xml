@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<preferences version="10.0">
+  <category name="Product Structure.QSearch Configuration">
+    <category_description></category_description>
+    <preference name="QSEARCH_chunk_size" type="String" array="false" disabled="false">
+      <preference_description></preference_description>
+      <context name="Teamcenter">
+        <value>1000</value>
+      </context>
+    </preference>
+    <preference name="QSEARCH_disable_bbox_for_product_scoping" type="Logical" array="false" disabled="false">
+      <preference_description>
+        Deactivates the sending of translation requests to Dispatcher during spatial indexing, when a non-indexable structure is added under an indexable structure.
+        The dispatcher requests will create bounding box data for cacheless search. This preference is only valid when cacheless search Product Scoping is enabled.
+        Valid values are:
+        * true: Deactives the sending of translation requests.
+        * false: Translation requests are being sent. This is the default value.
+        This is a site preference.
+      </preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="QSEARCH_dispatcher_not_available" type="Logical" array="false" disabled="false">
+      <preference_description>
+        Deactivates the dispatcher use in spatial index generation for Cacheless search.
+        The default value is false (dispatcher is configured and qsearch service is available).
+        This is a site preference.
+      </preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="QSEARCH_foreground_processing_halted" type="Logical" array="false" disabled="false">
+      <preference_description>Enables foreground processing of QSearch index functionality.
+        The scope for this preference is all (environment variable, user, group, role, site).
+        Valid values are:
+        True: The processing is in the foreground. This is the default value.
+        False: The processing is in the background.
+      </preference_description>
+      <context name="Teamcenter">
+        <value>True</value>
+      </context>
+    </preference>
+    <preference name="QSEARCH_queue_recurring_background_updates" type="Logical" array="false" disabled="false">
+      <preference_description>Specifies whether to create a recurring dispatcher request for qsearch_process_queue.QSEARCH_foreground_processing_halted preference needs to be set to true before setting this preference.  Recurring dispatcher requests will be executed on a regular time interval by dispatcher. You also need to set the following preferences to specify the time interval and life span of the recurring dispatcher request.
+      Valid values are:
+      true: Recurring dispatcher request will be created.
+      false: A dispatcher request will be created but it will not be a recurring request.
+      </preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="QSEARCH_recurring_background_update_interval" type="Double" array="false" disabled="false">
+      <preference_description>Specifies time interval for recurring request being created for qsearch_process_queue utility.
+      Valid values are Time in Seconds.QSEARCH_queue_recurring_background_updates preference needs to be set to true before setting this preference.  Recurring dispatcher requests will be executed on a regular time interval by dispatcher.
+      </preference_description>
+      <context name="Teamcenter">
+        <value>1000</value>
+      </context>
+    </preference>
+    <preference name="QSEARCH_recurring_background_update_survival_time" type="Double" array="false" disabled="false">
+      <preference_description>Specifies the life of recurring request being created for qsearch_process_queue utility.
+        Valid values are Time in seconds.QSEARCH_queue_recurring_background_updates preference needs to be set to true before setting this preference.  Recurring dispatcher requests will be executed on a regular time interval by dispatcher.
+        Valid values are Time in Seconds.
+      </preference_description>
+      <context name="Teamcenter">
+        <value>2000</value>
+      </context>
+    </preference>
+    <preference name="QSEARCH_update_enabled" type="Logical" array="false" disabled="false">
+      <preference_description>Indicates whether QSearch spatial data updating is enabled or disabled.</preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="QS_BBOX_GENERATION_ENABLED" type="Logical" array="false" disabled="false">
+      <preference_description>Indicates whether Bounding Box data generation from JT is enabled or disabled.</preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="QS_BBOX_GENERATION_FROM_NX_ENABLED" type="Logical" array="false" disabled="false">
+      <preference_description>Indicates whether Bounding Box data generation from UGPART-BBOX form of NX dataset is enabled or disabled.</preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="QS_SPATIAL_ENABLED" type="Logical" array="false" disabled="false">
+      <preference_description>Indicates whether QSearch spatial (e.g. proximity, box etc) functionality is enabled or disabled.</preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="QS_IGNORE_JT_USER_VOLUME" type="Logical" array="false" disabled="false">
+      <preference_description>
+        Activates the storage of trushape data files in the volume of the JT file owners for the &quot;Create Or Update Bounding Box And TSO&quot; command of the Cacheless search.
+        The default value is false: TSO (TruShape Data) files will be stored in JT files volume.
+        This is a site preference.
+      </preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+    <preference name="QS_QSEARCH_ENABLED" type="Logical" array="false" disabled="false">
+      <preference_description>Indicates whether QSearch functionality is enabled or disabled.</preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="QS_TRUSHAPE_GENERATION_ENABLED" type="Logical" array="false" disabled="false">
+      <preference_description>Indicates whether Trushape data generation from JT is enabled or disabled.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+    <preference name="QS_remote_master_site" type="String" array="true" disabled="false">
+      <preference_description>Defines the site where cacheless search engine will perform the query. 
+       Format should be: &lt;Product Top level Item Id:Site name&gt; 
+       Remote search checkbox will be visible only for the Product Item IDs specified in this preference. 
+       No default value is required.
+     </preference_description>
+      <context name="Teamcenter">
+        <value>ABC0001:site1</value>
+      </context>
+    </preference>
+    <preference name="TC_qsearch_remote_query_timeout" type="Integer" array="false" disabled="false">
+      <preference_description>Specifies the timeout period (in seconds) for remote qsearch queries.
+	  The default value for this site preference is 3600s.
+	  </preference_description>
+      <context name="Teamcenter">
+        <value>3600</value>
+      </context>
+    </preference>
+  </category>
+
+</preferences>

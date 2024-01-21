@@ -1,1 +1,2 @@
-# Scripts4Teamcenter4EveryDay
+Here are some of the scripts that I use when working with the best **PLM** system in the world, **Teamcenter**, from **Siemens Digital Industry Software** .
+Perhaps something will be useful to you; the repository will be periodically replenished/updated.
